@@ -1,7 +1,7 @@
 <?php
     include "header.php";
 ?>
-    <link rel="stylesheet" href="targetStyle.css">
+    <link rel="stylesheet" href="targetstyle.css">
 
         <div id = "instructions" class = "yes">To select characters to target, click on box then press key</div>    
         <div class = targetBoxContainer>

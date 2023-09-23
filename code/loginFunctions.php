@@ -35,8 +35,8 @@ function login($conn, $name, $password)
     }
     else if($checkPwd === true)
     {
-        setcookie("userId", $resultData['userId'], time() + (86400), "/UTyper");  
-        setcookie("userName", $resultData['userName'], time() + (86400), "/UTyper");
+        setcookie("userId", $resultData['userId'], time() + (86400), "/");  
+        setcookie("userName", $resultData['userName'], time() + (86400), "/");
         
 
         header("location: ../index.php");

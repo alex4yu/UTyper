@@ -1,6 +1,6 @@
 <?php 
     include_once "dbhHandler.php";
-    include_once "setCookie.php";
+    
     if(!isset($_COOKIE["userId"]) || !isset($_COOKIE["userName"]))
     {
         header("location: ../settings.php?error=nologin");
@@ -20,19 +20,19 @@
     $error = $array[4];
     $backspace = $array[5];
     
-    setcookie("theme", $theme, time() - (86400), "/UTyper");  
-    setcookie("wpm", $wpm, time() - (86400), "/UTyper");  
-    setcookie("percent", $percent, time() - (86400), "/UTyper");  
-    setcookie("truetyping", $truetyping, time() - (86400), "/UTyper");  
-    setcookie("error", $error, time() - (86400), "/UTyper");  
-    setcookie("backspace", $backspace, time() - (86400), "/UTyper");
+    setcookie("theme", $theme, time() - (86400), "/uTyper");  
+    setcookie("wpm", $wpm, time() - (86400), "/uTyper");  
+    setcookie("percent", $percent, time() - (86400), "/uTyper");  
+    setcookie("truetyping", $truetyping, time() - (86400), "/uTyper");  
+    setcookie("error", $error, time() - (86400), "/uTyper");  
+    setcookie("backspace", $backspace, time() - (86400), "/uTyper");
     
-    setcookie("theme", $theme, time() + (86400), "/UTyper");  
-    setcookie("wpm", $wpm, time() + (86400), "/UTyper");  
-    setcookie("percent", $percent, time() + (86400), "/UTyper");  
-    setcookie("truetyping", $truetyping, time() + (86400), "/UTyper");  
-    setcookie("error", $error, time() + (86400), "/UTyper");  
-    setcookie("backspace", $backspace, time() + (86400), "/UTyper");
+    setcookie("theme", $theme, time() + (86400), "/uTyper");  
+    setcookie("wpm", $wpm, time() + (86400), "/uTyper");  
+    setcookie("percent", $percent, time() + (86400), "/uTyper");  
+    setcookie("truetyping", $truetyping, time() + (86400), "/uTyper");  
+    setcookie("error", $error, time() + (86400), "/uTyper");  
+    setcookie("backspace", $backspace, time() + (86400), "/uTyper");
 
     //header("location: ../settings.php?set=".$theme.",".$wpm.",".$percent.",".$truetyping.",".$error.",".$backspace);
     header("location: ../settings.php");
