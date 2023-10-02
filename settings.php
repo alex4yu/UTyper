@@ -1,7 +1,7 @@
 <?php
     include "header.php";
 ?>
-<link rel="stylesheet" href="settingsStyle.css">
+<link rel="stylesheet" href="settingsstyle.css">
 
 
         <div class = "divPageTitle">

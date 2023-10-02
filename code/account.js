@@ -18,7 +18,6 @@ function checkSignupError(page)
     else if(page.includes("success"))
         {errorDiv.innerHTML =  "Success!";}
 }
-
 function checkLoginError(page)
 {   
     var errorDiv = document.getElementById("errors");

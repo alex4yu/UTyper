@@ -146,7 +146,6 @@ function loadAll()
     var page = document.location.href;
     background_color_divs.push(document.getElementById("body"));
     document.getElementById("user").innerHTML = userName;
-    alert(userName);
     text_color_divs.push(document.getElementById("user"));
     title_color_divs.push(document.getElementById("title"));
     //alert(page);

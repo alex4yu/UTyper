@@ -20,19 +20,19 @@
     $error = $array[4];
     $backspace = $array[5];
     
-    setcookie("theme", $theme, time() - (86400), "/uTyper");  
-    setcookie("wpm", $wpm, time() - (86400), "/uTyper");  
-    setcookie("percent", $percent, time() - (86400), "/uTyper");  
-    setcookie("truetyping", $truetyping, time() - (86400), "/uTyper");  
-    setcookie("error", $error, time() - (86400), "/uTyper");  
-    setcookie("backspace", $backspace, time() - (86400), "/uTyper");
+    setcookie("theme", $theme, time() - (86400), "/");  
+    setcookie("wpm", $wpm, time() - (86400), "/");  
+    setcookie("percent", $percent, time() - (86400), "/");  
+    setcookie("truetyping", $truetyping, time() - (86400), "/");  
+    setcookie("error", $error, time() - (86400), "/");  
+    setcookie("backspace", $backspace, time() - (86400), "/");
     
-    setcookie("theme", $theme, time() + (86400), "/uTyper");  
-    setcookie("wpm", $wpm, time() + (86400), "/uTyper");  
-    setcookie("percent", $percent, time() + (86400), "/uTyper");  
-    setcookie("truetyping", $truetyping, time() + (86400), "/uTyper");  
-    setcookie("error", $error, time() + (86400), "/uTyper");  
-    setcookie("backspace", $backspace, time() + (86400), "/uTyper");
+    setcookie("theme", $theme, time() + (86400), "/");  
+    setcookie("wpm", $wpm, time() + (86400), "/");  
+    setcookie("percent", $percent, time() + (86400), "/");  
+    setcookie("truetyping", $truetyping, time() + (86400), "/");  
+    setcookie("error", $error, time() + (86400), "/");  
+    setcookie("backspace", $backspace, time() + (86400), "/");
 
     //header("location: ../settings.php?set=".$theme.",".$wpm.",".$percent.",".$truetyping.",".$error.",".$backspace);
     header("location: ../settings.php");

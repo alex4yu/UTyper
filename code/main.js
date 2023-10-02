@@ -26,6 +26,7 @@ function next()
     clearInterval(blinker_interval);
     wpm_div.innerHTML="";
     accuracy_div.innerHTML="";
+    total_words_typed = [];
     if(randomWiki)
     {
         loadWiki();
@@ -455,6 +456,7 @@ function createGraph()
             var totalSectionWPM = 2*(i+1)/total_section_times_array[2*(i+1)-1]*60.0
             totalWPMbySection.push(totalSectionWPM);
             total_words_typed.push(2 * (i + 1));
+            
         }
     }
     else if(total_word_length === 10)
@@ -472,6 +474,7 @@ function createGraph()
             var totalSectionWPM = (i+1)/total_section_times_array[i]*60.0
             totalWPMbySection.push(totalSectionWPM);
             total_words_typed.push(i + 1);
+            
         }
     }
     else if(quotes)
@@ -496,20 +499,25 @@ function createGraph()
                 totalWPMbySection.push(totalSectionWPM);
                 total_words_typed.push(8 * (i + 1));
             }
-            var time;
-            for(var i = dividend * 8; i < length; i++)
+            
+            if(length%8 != 0)
             {
-                time = time + section_times_array[i];
+                var time;
+                for(var i = dividend * 8; i < length; i++)
+                {
+                    time = time + section_times_array[i];
+                }
+                var sectionWpm = parseInt(remainder * 60.0 /time);
+                if(sectionWpm > maxWMP)
+                {
+                    maxWMP = sectionWpm;
+                }
+                sectionWPMArray.push(sectionWpm);
+                var totalSectionWPM = length/total_section_times_array[length-1]*60.0
+                totalWPMbySection.push(totalSectionWPM);
+                total_words_typed.push(length);
             }
-            var sectionWpm = parseInt(remainder * 60.0 /time);
-            if(sectionWpm > maxWMP)
-            {
-                maxWMP = sectionWpm;
-            }
-            sectionWPMArray.push(sectionWpm);
-            var totalSectionWPM = length/total_section_times_array[length-1]*60.0
-            totalWPMbySection.push(totalSectionWPM);
-            total_words_typed.push(length);
+            
         }
         else if(length > 40)
         {
@@ -529,20 +537,24 @@ function createGraph()
                 totalWPMbySection.push(totalSectionWPM);
                 total_words_typed.push(6 * (i + 1));
             }
-            var time;
-            for(var i = dividend * 6; i < length; i++)
+            
+            if(length%6 != 0)
             {
-                time = time + section_times_array[i];
+                var time;
+                for(var i = dividend * 6; i < length; i++)
+                {
+                    time = time + section_times_array[i];
+                }
+                var sectionWpm = parseInt(remainder * 60.0 /time);
+                if(sectionWpm > maxWMP)
+                {
+                    maxWMP = sectionWpm;
+                }
+                sectionWPMArray.push(sectionWpm);
+                var totalSectionWPM = length/total_section_times_array[length-1]*60.0;
+                totalWPMbySection.push(totalSectionWPM);
+                total_words_typed.push(length);
             }
-            var sectionWpm = parseInt(remainder * 60.0 /time);
-            if(sectionWpm > maxWMP)
-            {
-                maxWMP = sectionWpm;
-            }
-            sectionWPMArray.push(sectionWpm);
-            var totalSectionWPM = length/total_section_times_array[length-1]*60.0;
-            totalWPMbySection.push(totalSectionWPM);
-            total_words_typed.push(length);
         }
         else if(length > 20)
         {
@@ -562,20 +574,24 @@ function createGraph()
                 totalWPMbySection.push(totalSectionWPM);
                 total_words_typed.push(4 * (i + 1));
             }
-            var time;
-            for(var i = dividend * 4; i < length; i++)
+            
+            if(length%4 != 0)
             {
-                time = time + section_times_array[i];
+                var time;
+                for(var i = dividend * 4; i < length; i++)
+                {
+                    time = time + section_times_array[i];
+                }
+                var sectionWpm = parseInt(remainder * 60.0 /time);
+                if(sectionWpm > maxWMP)
+                {
+                    maxWMP = sectionWpm;
+                }
+                sectionWPMArray.push(sectionWpm);
+                var totalSectionWPM = length/total_section_times_array[length-1]*60.0;
+                totalWPMbySection.push(totalSectionWPM);
+                total_words_typed.push(length);
             }
-            var sectionWpm = parseInt(remainder * 60.0 /time);
-            if(sectionWpm > maxWMP)
-            {
-                maxWMP = sectionWpm;
-            }
-            sectionWPMArray.push(sectionWpm);
-            var totalSectionWPM = length/total_section_times_array[length-1]*60.0;
-            totalWPMbySection.push(totalSectionWPM);
-            total_words_typed.push(length);
         }
         else{
             var dividend = parseInt(length/2)
@@ -594,20 +610,24 @@ function createGraph()
                 totalWPMbySection.push(totalSectionWPM);
                 total_words_typed.push(2 * (i + 1));
             }
-            var time;
-            for(var i = dividend * 2; i < length; i++)
+            
+            if(length%2 != 0)
             {
-                time = time + section_times_array[i];
+                var time;
+                for(var i = dividend * 2; i < length; i++)
+                {
+                    time = time + section_times_array[i];
+                }
+                var sectionWpm = parseInt(remainder * 60.0 /time);
+                if(sectionWpm > maxWMP)
+                {
+                    maxWMP = sectionWpm;
+                }
+                sectionWPMArray.push(sectionWpm);
+                var totalSectionWPM = length/total_section_times_array[length-1]*60.0;
+                totalWPMbySection.push(totalSectionWPM);
+                total_words_typed.push(length);
             }
-            var sectionWpm = parseInt(remainder * 60.0 /time);
-            if(sectionWpm > maxWMP)
-            {
-                maxWMP = sectionWpm;
-            }
-            sectionWPMArray.push(sectionWpm);
-            var totalSectionWPM = length/total_section_times_array[length-1]*60.0;
-            totalWPMbySection.push(totalSectionWPM);
-            total_words_typed.push(length);
         }
     }
     

@@ -10,16 +10,16 @@
             <p class = "child_count" id = "40">40</p>
         </div>
         <div class = "targets" id = "targets"></div>
-        <div class = "trackerParent">
-            <div class = "timer" id = "timer"></div>
-            <div class = "timer" id = "wpm"></div>
-            <div class = "timer" id = "accuracy"></div>
+        <div class = "promptTrackerParent">
+            <div class = "trackerParent">
+                <div class = "tracker" id = "timer"></div>
+                <div class = "tracker" id = "wpm"></div>
+                <div class = "tracker" id = "accuracy"></div>
+            </div>
+            <div class="prompt" id = "prompt"></div>
         </div>
-        <div class="prompt" id = "prompt"></div>
-        
-            
-        
-        <div id="next" class = "next">></div>
+        <div id="next" class = "next">></div>      
+       
 <?php
     include "footer.php";
 ?>

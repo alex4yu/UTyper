@@ -1,33 +1,42 @@
+.promptTrackerParent
+{
+    height: 400px;
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+}
+.trackerParent{
+    /*border: 3px solid yellow;*/
+    height: 40px;
+    text-align: left;
 
- .trackerParent{
-     /*border: 3px solid yellow;*/
-     height: 40px;
-     text-align: left;
- 
- }
- .timer {
-     display: inline-block;
-     height:40px;
-     width: 66px;
-     font-size: 40px;
-     font-family: 'Roboto Mono', monospace;
-     text-align: left;
-     /*border: 1px solid white;*/
-     margin-right: 20px;
-     
- }
- .prompt{
-     height: 300px;
-     width: 1500px;
-     margin-top: 20px;
-     margin-left: auto;
-     margin-right: auto;
-     text-align: left;
-     word-wrap: break-word;
-     /*border: 1px solid white;*/
-     
-     
- }
+}
+.tracker {
+    display: inline-block;
+    height:40px;
+    width: 66px;
+    font-size: 40px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+    /*border: 1px solid white;*/
+    margin-right: 20px;
+    
+}
+.prompt{
+    height: 350px;
+    width: 1500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    word-wrap: break-word;
+    /*border: 1px solid white;*/
+    
+    
+}
  .testParent {
      /*border: 1px solid white;*/
      height: 40px;
