@@ -18,6 +18,7 @@
             </div>
             <div class="prompt" id = "prompt"></div>
         </div>
+        
         <div id="next" class = "next">></div>      
        
 <?php
