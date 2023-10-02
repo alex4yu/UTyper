@@ -465,7 +465,7 @@ async function loadTarget(words)
         else
         {
             var letter = target_characters[i];
-            var file_name = "letterfiles/" + letter + ".txt";
+            var file_name = "letterFiles/" + letter + ".txt";
             var file_return = await readFile(file_name);
             var target_array = file_return.split(/\r?\n/)
             target_character_arrays.push(target_array);
