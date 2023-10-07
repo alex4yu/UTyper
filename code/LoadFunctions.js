@@ -453,6 +453,7 @@ function loadLetters(words)
         }
         word_list = word_list + " ";
     }
+    word_list = word_list.substring(0,word_list.length - 1);
     setText();
 }
 async function loadTarget(words)
@@ -495,6 +496,7 @@ async function loadTarget(words)
         
         word_list = word_list + word + " ";
     }
+    word_list = word_list.substring(0,word_list.length - 1);
     setText();
 }
 async function loadWords(words)
